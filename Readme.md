@@ -116,3 +116,37 @@ echo "[*] Enumeration complete for $IP"
 echo "===================================="
 
 ```
+
+
+
+## "Term" hunter alis which lives in my .zshrc
+
+```sh
+xs() {                                                                                                                   
+    # Check if an argument is provided                                                                                   
+    if [ -z "$1" ]; then                                                                                                 
+        echo "Error: Please provide a search term."                                                                      
+        return 1                                                                                                         
+    fi                                                                                                                   
+                                                                                                                         
+    # Define the path to your snippets file                 
+    SNIPPETS_FILE="/home/kali/OSCP/OSCP-COURSE-Notes/OSCP-Obsidian-Vault/HackingSnippets-2024.md"
+                                                            
+    # Check if the snippets file exists                                                                                  
+    if [ ! -f "$SNIPPETS_FILE" ]; then                                                                                   
+        echo "Error: Snippets file not found at $SNIPPETS_FILE"                                                                                                                                                                                    
+        return 1                                                                                                         
+    fi                                                      
+                                                                                                                         
+    # Search for the term in the file and print results with eye-catch separator                                         
+    grep --color=always -i "$1" "$SNIPPETS_FILE" | while IFS= read -r line; do
+        echo "---------"                                                                                                 
+        echo "$line"                                   
+    done                                                                                                                 
+                                                            
+    # Check if grep found any matches                                                                                    
+    if [ $? -ne 0 ]; then      
+        echo "No results found for '$1'"                                                                                 
+    fi
+}                                                           
+```
