@@ -5,9 +5,9 @@
 
 
 
-### .zshrc alias to launch into a box 
+## .zshrc alias to launch into a box 
 
-#### first I run thsi script
+#### first I run this script through an alias
 
 ```sh
 #!/bin/bash
