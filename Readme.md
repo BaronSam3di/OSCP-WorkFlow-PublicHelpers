@@ -5,7 +5,7 @@
 
 
 
-## .zshrc alias to launch into a box 
+## .zshrc alias to launch into a box : `box-OSCP`
 
 #### first I run this script through an alias
 
