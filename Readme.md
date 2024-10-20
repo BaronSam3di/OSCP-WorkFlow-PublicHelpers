@@ -119,7 +119,7 @@ echo "===================================="
 
 
 
-## "Term" hunter alis which lives in my .zshrc
+## "Term" hunter alias which lives in my .zshrc
 
 ```sh
 xs() {                                                                                                                   
